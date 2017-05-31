@@ -1,0 +1,111 @@
+a:3:{s:4:"time";i:1496064396;s:3:"ttl";i:3600;s:4:"data";s:3500:"<ul class="menu-links">
+				<li>
+					<a href="index.html"><i class="md md-equalizer"></i>&nbsp;<span>Overview</span></a>
+				</li>
+				<li>
+					<a href="javascript:void()" data-toggle="collapse" data-target="#Posts" aria-expanded="false" aria-controls="Posts" class="collapsible-header waves-effect"><i class="md md-description"></i>&nbsp;Posts</a>
+
+					<ul id="Posts" class="collapse">
+						<li name="All">
+							<a href="/bb-admin/posts/filter/all">
+								<span>All</span>
+							</a>
+						</li>
+						<li name="Draft">
+							<a href="/bb-admin/posts/filter/draft">
+								<span>Draft</span>
+							</a>
+						</li>
+						<li name="Scheduled">
+							<a href="/bb-admin/posts/filter/scheduled">
+								<span>Scheduled</span>
+							</a>
+						</li>
+						<li name="Published">
+							<a href="/bb-admin/posts/filter/published">
+								<span>Published</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:void()" data-toggle="collapse" data-target="#Pages" aria-expanded="false" aria-controls="Pages" class="collapsible-header waves-effect"><i class="md md-insert-drive-file"></i>&nbsp;Pages</a>
+
+					<ul id="Pages" class="collapse">
+						<li name="All">
+							<a href="/bb-admin/posts/filter/all">
+								<span>All</span>
+							</a>
+						</li>
+						<li name="Draft">
+							<a href="/bb-admin/posts/filter/draft">
+								<span>Draft</span>
+							</a>
+						</li>
+						<li name="Scheduled">
+							<a href="/bb-admin/posts/filter/scheduled">
+								<span>Scheduled</span>
+							</a>
+						</li>
+						<li name="Published">
+							<a href="/bb-admin/posts/filter/published">
+								<span>Published</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:void()" data-toggle="collapse" data-target="#Comments" aria-expanded="false" aria-controls="Comments" class="collapsible-header waves-effect"><i class="md  md-comment"></i>&nbsp;Comments</a>
+
+					<ul id="Comments" class="collapse">
+						<li name="All">
+							<a href="/bb-admin/posts/filter/all">
+								<span>All</span>
+							</a>
+						</li>
+						<li name="Draft">
+							<a href="/bb-admin/posts/filter/draft">
+								<span>Draft</span>
+							</a>
+						</li>
+						<li name="Scheduled">
+							<a href="/bb-admin/posts/filter/scheduled">
+								<span>Scheduled</span>
+							</a>
+						</li>
+						<li name="Published">
+							<a href="/bb-admin/posts/filter/published">
+								<span>Published</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="index.html"><i class="md md-poll"></i>&nbsp;<span>Statistic</span></a>
+				</li>
+				<li>
+					<a href="index.html"><i class="md md-now-widgets"></i>&nbsp;<span>Widget</span></a>
+				</li>
+				<li>
+					<a href="index.html"><i class="md md-web"></i>&nbsp;<span>Layout</span></a>
+				</li>
+				<li>
+					<a href="index.html"><i class="md md-palette"></i>&nbsp;<span>Template</span></a>
+				</li>
+				<li>
+					<a href="javascript:void()" data-toggle="collapse" data-target="#Settings" aria-expanded="false" aria-controls="Settings" class="collapsible-header waves-effect"><i class="md  md-comment"></i>&nbsp;Settings</a>
+
+					<ul id="Settings" class="collapse">
+						<li name="Basic Settings">
+							<a href="/bb-admin/posts/filter/draft">
+								<span>Basic Settings</span>
+							</a>
+						</li>
+						<li name="Advanced Settings">
+							<a href="/bb-admin/posts/filter/all">
+								<span>Advanced Settings</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>";}

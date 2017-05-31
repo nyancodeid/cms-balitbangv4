@@ -1,0 +1,99 @@
+:root {
+	--pink : rgb(255,64,129);
+}
+
+html, body {
+	height: 100vh;
+	font-family: 'Roboto','Helvetica','Arial',sans-serif;
+}
+
+/*Components*/
+balitbang-apps, wrapper, content-apps, article-content, article-stats {
+	display: block;
+}
+
+wrapper {
+	width: 90%;
+}
+
+
+/*Directive*/
+content-apps {
+	padding: 0 8px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+/*Class*/
+.auto-align {
+	margin: 0 auto;
+}
+.bredchrumb {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	padding: 16px 0;
+}
+.bredchrumb li {
+	display: inline-block;
+	font-size: 16px;
+}
+.bredchrumb li:not(:first-child) {
+	margin-left: 8px;
+}
+
+ul.left-menu > li > a {
+    padding-left: 0;
+}
+ul.left-menu > li a {
+    color: #333;
+    opacity: .87;
+    font-size: 16px;
+}
+ul.left-menu > li > a i.material-icons {
+	color: #a6a6a6;
+}
+ul.left-menu > li a:hover,
+ul.left-menu > li a:focus {
+	background-color: #f7f7f7;
+}
+ul.left-menu ul li > a {
+	padding-left: 2em;
+}
+.new-post-button {
+	font-size: 13px;
+	margin: 8px 0;
+}
+.table.table-small {
+	font-size: 13px;
+	white-space: nowrap;
+	margin-bottom: 0;
+}
+.table.table-small td {
+	vertical-align: middle;
+	height: 48px;
+	padding: 12px 18px;
+}
+.table.table-small tr td:last-child {
+	text-align: right;
+}
+
+[nm] {
+	margin: 0;
+}
+[np] {
+	padding: 0;
+}
+
+/*Reset*/
+.navbar.navbar-default {
+	background-image: none;
+	border-radius: 0;
+	margin-bottom: 0;
+	box-shadow: none;
+	border-bottom: none;
+}
+a > i.material-icons {
+	vertical-align: middle;
+	padding-bottom: 4px;
+}

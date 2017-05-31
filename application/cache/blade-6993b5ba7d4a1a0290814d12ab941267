@@ -1,0 +1,109 @@
+a:3:{s:4:"time";i:1496075400;s:3:"ttl";i:3600;s:4:"data";s:3745:"<header class="mdl-shadow--2dp" style="margin-bottom: 20px;">
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				</button>
+				<a class="navbar-brand" href="#">BalitBang CMS</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+            	<ul class="nav navbar-nav">
+		   			<li><a href="#">Lihat Website</a></li>
+		    	</ul>
+            </div>
+		</div>
+	</nav>
+	<div class="big-nav">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2">
+					<h4><?php echo  $config['sekolah']['name'] ; ?></h4>
+				</div>
+				<div class="col-md-10">
+					<ul class="bredchrumb">
+						<li>Overview</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<main>
+	<div class="container">
+		<div class="row">
+			<!-- Sidenav -->
+			<aside class="col-md-2">
+				<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored new-post-button">New Post</button>
+				<ul class="nav nav-pills nav-stacked left-menu" id="stacked-menu">
+					<li>
+						<a href="index.html"><i class="material-icons">equalizer</i>&nbsp;&nbsp;<span>Overview</span></a>
+					</li>
+					<li>
+						<a href="#" data-target="#item1" data-toggle="collapse" data-parent="#stacked-menu"><i class="material-icons">description</i>&nbsp;&nbsp;Posts</a>
+						
+						<ul class="nav nav-stacked collapse left-submenu" id="item1">
+							<li name="All">
+								<a href="/bb-admin/posts/filter/all">
+									<span>All</span>
+								</a>
+							</li>
+							<li name="Draft">
+								<a href="/bb-admin/posts/filter/draft">
+									<span>Draft</span>
+								</a>
+							</li>
+							<li name="Scheduled">
+								<a href="/bb-admin/posts/filter/scheduled">
+									<span>Scheduled</span>
+								</a>
+							</li>
+							<li name="Published">
+								<a href="/bb-admin/posts/filter/published">
+									<span>Published</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" data-target="#item2" data-toggle="collapse" data-parent="#stacked-menu"><i class="material-icons">insert_drive_file</i>&nbsp;&nbsp;Pages</a>          
+						<ul class="nav nav-stacked collapse left-submenu" id="item2">
+							<li><a href="#">View One</a></li>
+							<li><a href="#">View Two</a></li>
+							<li><a href="#">View Three</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" data-target="#item3" data-toggle="collapse" data-parent="#stacked-menu"><i class="material-icons">comment</i>&nbsp;&nbsp;Comments</a>          
+						<ul class="nav nav-stacked collapse left-submenu" id="item3">
+							<li><a href="#">View One</a></li>
+							<li><a href="#">View Two</a></li>
+							<li><a href="#">View Three</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" data-target="#item4" data-toggle="collapse" data-parent="#stacked-menu"><i class="material-icons">poll</i>&nbsp;&nbsp;Statistic</a>          
+						<ul class="nav nav-stacked collapse left-submenu" id="item4">
+							<li><a href="#">View One</a></li>
+							<li><a href="#">View Two</a></li>
+							<li><a href="#">View Three</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="index.html"><i class="material-icons">widgets</i>&nbsp;&nbsp;<span>Widget</span></a>
+					</li>
+					<li>
+						<a href="index.html"><i class="material-icons">web</i>&nbsp;&nbsp;<span>Layout</span></a>
+					</li>
+					<li>
+						<a href="index.html"><i class="material-icons">palette</i>&nbsp;&nbsp;<span>Template</span></a>
+					</li>
+				</ul>
+			</aside>
+		
+
+			<main class="col-md-10">
+				<?php echo $this->_yield('content'); ?>
+			</main>
+		</div>
+	</div>
+</main>";}

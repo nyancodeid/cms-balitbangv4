@@ -1,0 +1,7 @@
+<FilesMatch "\.(db|sqlite|sdb|s3db)$">
+    Deny from all
+</FilesMatch>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(index\.php|img|css|js|install|robots\.txt|favicon\.ico|update\.php)

@@ -1,0 +1,99 @@
+a:3:{s:4:"time";i:1496077236;s:3:"ttl";i:3600;s:4:"data";s:2186:"
+
+<?php $this->_section_start('style'); ?>
+<style>
+@import '/assets/css/chartist.min.css';
+@import '/assets/css/chartist-plugin-tooltip.css';
+
+.demo-card-wide.mdl-card {
+	width: 512px;
+}
+.demo-card-wide > .mdl-card__menu {
+	color: #fff;
+}
+
+</style>
+<?php $this->_section_end(); ?>
+
+<?php $this->_section_start('content'); ?>
+<div class="row">
+	<div class="col-md-7">
+		<h4>Pageview</h4>
+		<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+			<div class="ct-chart">
+				
+			</div>
+			<div class="mdl-card__supporting-text">
+			Berikut adalah statistik pengunjung di website <?php echo  $config['sekolah']['name'] ; ?> dalam kurun waktu 5 hari. Statistik mungkin tidak begitu akurat.
+			</div>
+			<div class="mdl-card__actions mdl-card--border">
+				<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+					More Detail
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-5">
+		<div class="mdl-card mdl-shadow--2dp">
+			<div class="mdl-card__supporting-text">
+				<h5 nm>More</h5>
+			</div>
+			<div class="table-responsive">
+				<table class="table table-small grey-text">
+					<colgroup>
+						<col width="">
+						<col width="60">
+						<col width="50">
+					</colgroup>
+					<tbody>
+						<tr>
+							<td>Komentar Baru</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>Pengunjung Hari Ini</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>Post Hari ini</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td>Dibagikan Hari ini</td>
+							<td>2</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<?php $this->_section_end(); ?>
+
+<?php $this->_section_start('javascript'); ?>
+<script src="/assets/js/chartist.min.js"></script>
+<script src="/assets/js/chartist-plugin-tooltip.min.js"></script>
+<script>
+new Chartist.Line('.ct-chart', {
+	labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Today'],
+	series: [
+		[12, 9, 7, 8, 5]
+	]
+}, {
+	high: 20,
+	fullWidth: true,
+	showArea: true,
+	heigh: '176px',
+	chartPadding: {
+		right: 40
+	},
+	plugins: [
+		Chartist.plugins.tooltip({
+			anchorToPoint: true
+		})
+	]
+});
+</script>
+<?php $this->_section_end(); ?>
+<?php echo $this->_include('Admin/Dashboard/layout'); ?>
+";}
