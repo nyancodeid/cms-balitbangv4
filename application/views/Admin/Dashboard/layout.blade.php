@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>{{ $title }} - NyanHotel</title>
+	<title>{{ $title }}</title>
 
 	<!-- Vendor CSS -->
 	<link rel="stylesheet" href="{{ base_url('assets/css/bootstrap.css') }}">
@@ -28,7 +28,7 @@
 </head>
 <body scroll-spy="" id="top" class="theme-template-dark theme-pink alert-open alert-with-mat-grow-top-right">
 	<balitbang-apps>
-		 @include('Admin/Dashboard/Components/apps')
+		@include('Admin/Dashboard/Components/apps')
 	</balitbang-apps>
 	
 

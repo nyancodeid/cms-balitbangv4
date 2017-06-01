@@ -8,10 +8,18 @@ Class Dashboard extends Admin_Controller
 		parent::__construct();
 
 		$this->config();
+		$this->load->library('ion_auth');
 	}
 
 	public function index()
 	{
+		if (!$this->ion_auth->logged_in())
+		{
+			redirect('bb-admin/login');
+
+			return false;
+		}
+
 		$this->blade->render('Admin/Dashboard/index', [
 			"title" => "Dashboard",
 			"config" => $this->bb_config

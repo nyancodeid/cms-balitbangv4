@@ -149,24 +149,26 @@
 <script src="{{ base_url('assets/js/chartist.min.js') }}"></script>
 <script src="{{ base_url('assets/js/chartist-plugin-tooltip.min.js') }}"></script>
 <script>
-new Chartist.Line('.ct-chart', {
-	labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Today'],
-	series: [
-		[12, 9, 7, 8, 5]
-	]
-}, {
-	high: 20,
-	fullWidth: true,
-	showArea: true,
-	heigh: '176px',
-	chartPadding: {
-		right: 40
-	},
-	plugins: [
-		Chartist.plugins.tooltip({
-			anchorToPoint: true
-		})
-	]
-});
+$(function() {
+	new Chartist.Line('.ct-chart', {
+		labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Today'],
+		series: [
+			[12, 9, 7, 8, 5]
+		]
+	}, {
+		high: 20,
+		fullWidth: true,
+		showArea: true,
+		heigh: '176px',
+		chartPadding: {
+			right: 40
+		},
+		plugins: [
+			Chartist.plugins.tooltip({
+				anchorToPoint: true
+			})
+		]
+	});
+})
 </script>
 @endsection

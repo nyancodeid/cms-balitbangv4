@@ -55,3 +55,4 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 $route['bb-admin'] = 'Admin/dashboard';
+$route['bb-admin/login'] = 'Admin/auth/login';

@@ -77,6 +77,10 @@ ul.left-menu ul li > a {
 .table.table-small tr td:last-child {
 	text-align: right;
 }
+.subtitle {
+	font-size: 13px;
+    opacity: .83;
+}
 
 [nm] {
 	margin: 0;
@@ -96,4 +100,28 @@ ul.left-menu ul li > a {
 a > i.material-icons {
 	vertical-align: middle;
 	padding-bottom: 4px;
+}
+.mdl-textfield > label {
+	margin-bottom: 0 !important;
+	font-weight: normal !important;
+}
+.mdl-textfield {
+	padding-bottom: 0;
+}
+.mdl-textfield__label:after {
+	bottom: 0;
+}
+.no--floating-label {
+	margin-left: 16px;
+	width: 280px;
+}
+.no--floating-label .mdl-textfield__input {
+	padding: 8px 0;
+}
+.no--floating-label .mdl-textfield__label {
+	top: 28px;
+}
+.mdl-checkbox {
+	margin: 16px 0;
+	font-weight: normal;
 }
