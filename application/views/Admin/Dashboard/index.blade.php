@@ -59,12 +59,10 @@
 @section('content')
 <content-apps>
 <div class="row">
-	<div class="col-md-7">
+	<div class="col-md-7 col-xs-12">
 		<h4>Pageview</h4>
 		<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-			<div class="ct-chart">
-				
-			</div>
+			<div class="ct-chart"></div>
 			<div class="mdl-card__supporting-text">
 			Berikut adalah statistik pengunjung di website {{ $config['sekolah']['name'] }} dalam kurun waktu 5 hari. Statistik mungkin tidak begitu akurat.
 			</div>
@@ -101,7 +99,7 @@
 			</ul>
 		</div>
 	</div>
-	<div class="col-md-5">
+	<div class="col-md-5 col-xs-12">
 		<div class="mdl-card mdl-shadow--2dp">
 			<div class="mdl-card__supporting-text">
 				<h5 nm>More</h5>
@@ -140,6 +138,9 @@
 				<a href="#" class="mdl-button mdl-button--raised mdl-button--accent"><i class="material-icons">edit</i> Write</a>
 			</div>
 		</div>
+		<div class="mdl-card mdl-shadow--2dp">
+			<div id="widget-polling"></div>
+		</div>
 	</div>
 </div>
 </content-apps>
@@ -150,25 +151,64 @@
 <script src="{{ base_url('assets/js/chartist-plugin-tooltip.min.js') }}"></script>
 <script>
 $(function() {
-	new Chartist.Line('.ct-chart', {
-		labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Today'],
-		series: [
-			[12, 9, 7, 8, 5]
-		]
-	}, {
-		high: 20,
-		fullWidth: true,
-		showArea: true,
-		heigh: '176px',
-		chartPadding: {
-			right: 40
-		},
-		plugins: [
-			Chartist.plugins.tooltip({
-				anchorToPoint: true
-			})
-		]
+	$(document).ready(function() {
+		new Chartist.Line('.ct-chart', {
+			labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Today'],
+			series: [
+				[12, 9, 7, 8, 5]
+			]
+		}, {
+			high: 20,
+			fullWidth: true,
+			showArea: true,
+			heigh: '176px',
+			chartPadding: {
+				right: 40
+			},
+			plugins: [
+				Chartist.plugins.tooltip({
+					anchorToPoint: true
+				})
+			]
+		});
+
+		var data = {
+			labels: ['Jelek Njirr', 'Apples', 'Grapes'],
+			series: [20, 15, 40]
+		};
+
+		var options = {
+			labelInterpolationFnc: function(value) {
+				return value[0]
+			}
+		};
+
+		var responsiveOptions = [
+			['screen and (min-width: 640px)', {
+				chartPadding: 30,
+				labelOffset: 100,
+				labelDirection: 'explode',
+				labelInterpolationFnc: function(value) {
+				  return value;
+				}
+			}],
+			['screen and (min-width: 1024px)', {
+				labelOffset: 80,
+				chartPadding: 20
+			}]
+		];
+
+		new Chartist.Pie('#widget-polling', data, options, responsiveOptions);
+
+		var notification = document.querySelector('.mdl-js-snackbar');
+		var data = {
+			message: 'Selamat Datang, {{ $users->first_name }}',
+			timeout: 2000
+		};
+		notification.MaterialSnackbar.showSnackbar(data);
 	});
 })
 </script>
+
+@include('Components/actionJS')
 @endsection

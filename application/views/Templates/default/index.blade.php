@@ -1,0 +1,1 @@
+@layout('Templates/default/layout')

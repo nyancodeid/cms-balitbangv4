@@ -25,12 +25,19 @@
 	<!-- Custom CSS Inside HTML -->
 	@yield('style')
 
+	<!-- CSRF Protect -->
+	@include('Components/csrfToken')
+
+
 </head>
 <body scroll-spy="" id="top" class="theme-template-dark theme-pink alert-open alert-with-mat-grow-top-right">
 	<balitbang-apps>
 		@yield('content')
 	</balitbang-apps>
-	
+	<div aria-live="assertive" aria-atomic="true" aria-relevant="text" class="mdl-snackbar mdl-js-snackbar">
+	    <div class="mdl-snackbar__text"></div>
+	    <button type="button" class="mdl-snackbar__action"></button>
+	</div>
 
 	<!-- Javascript Vendor -->
 	<script src="{{ base_url('assets/js/jquery.js') }}"></script>

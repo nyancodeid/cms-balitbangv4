@@ -1,0 +1,31 @@
+{
+	"name": "Default",
+	"author": "Ryan Aunur Rassyid",
+	"version": "1.0",
+	"components": {
+		"header": {
+			"id": "header",
+			"widget": true,
+			"allowAdd": 3
+		},
+		"main": {
+			"id": "main-content",
+			"widget": true,
+			"child": {
+				"new-article": {
+					"id": "new-article-poll",
+					"widget": true,
+					"allowAdd": 2
+				}
+			}
+		},
+		"sidebar": {
+			"id": "sidebar",
+			"widget": true
+		},
+		"footer": {
+			"id": "main-footer",
+			"widget": false
+		}
+	}
+}

@@ -65,6 +65,9 @@ login-apps .submit.overlay i {
 	vertical-align: middle;
     padding-bottom: 4px;
 }
+login-apps .mdl-checkbox {
+	margin: 16px 0;
+}
 </style>
 @endsection
 
@@ -93,8 +96,8 @@ login-apps .submit.overlay i {
 								
 								<i class="mdl-textfield__icon material-icons subtitle">assignment_ind</i>
 								<div class="mdl-textfield mdl-js-textfield no--floating-label">
-									<input class="mdl-textfield__input" type="text" id="username">
-									<label class="mdl-textfield__label" for="username">Username</label>
+									<input class="mdl-textfield__input" type="text" id="identity">
+									<label class="mdl-textfield__label" for="identity">Username / Email</label>
 								</div>
 								
 								<i class="mdl-textfield__icon material-icons subtitle">lock_outline</i>
@@ -141,9 +144,28 @@ login-apps .submit.overlay i {
 
 @section('javascript')
 <script>
+	balitbang.isLogin = {{ ($logged_in) ? 1 : 0 }};
+</script>
+@include('Components/actionJS')
+<script>
 $(document).ready(function() {
+	var data = {
+		identity: '',
+		password: '',
+		remember_me: false
+	}
+
 	$('#next-button').click(function() {
-		alert('Next');
+		data.identity = $('#identity').val();
+		data.password = $('#password').val();
+		data.remember_me = $('.mdl-checkbox').hasClass('is-checked');
+		data.csrf_balitbang = balitbang.hash
+
+		action.login(data);
+	});
+
+	$(document).ready(function() {
+		action.isLogin();
 	});
 });
 </script>

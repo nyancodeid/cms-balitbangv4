@@ -16,10 +16,11 @@
 	
 	<!-- Reset CSS -->
 	<style>
-		a:hover,
-		a:focus {
-			text-decoration: none;
-		}
+	a:hover,
+	a:focus {
+		text-decoration: none;
+	}
+	my-apps {display: block;}
 	</style>
 
 	<!-- Custom CSS Inside HTML -->
@@ -29,18 +30,21 @@
 	@include('Components/csrfToken')
 </head>
 <body scroll-spy="" id="top" class="theme-template-dark theme-pink alert-open alert-with-mat-grow-top-right">
-	<balitbang-apps>
-		@include('Admin/Dashboard/Components/apps')
-	</balitbang-apps>
-	<div aria-live="assertive" aria-atomic="true" aria-relevant="text" class="mdl-snackbar mdl-js-snackbar">
-	    <div class="mdl-snackbar__text"></div>
-	    <button type="button" class="mdl-snackbar__action"></button>
-	</div>
+	<my-apps>
+
+	@include($pathTheme.'components/header')
+
+	</my-apps>
 
 	<!-- Javascript Vendor -->
 	<script src="{{ base_url('assets/js/jquery.js') }}"></script>
 	<script src="{{ base_url('assets/js/bootstrap.js') }}"></script>
 	<script src="{{ base_url('assets/js/material.js') }}"></script>
+
+	<!-- Balitbang Configuration Dont Remove this -->
+	<script>
+	var bbConfig = {{ $balitbangConfig }};
+	</script>
 
 	<!-- Custom Javascript inside HTML -->
 	@yield('javascript')

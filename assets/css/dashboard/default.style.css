@@ -25,6 +25,13 @@ content-apps {
 }
 
 /*Class*/
+#stacked-menu {
+	padding-bottom: 80px;
+}
+.icons {
+	vertical-align: middle;
+	padding-bottom: 4px;
+}
 .auto-align {
 	margin: 0 auto;
 }
@@ -122,6 +129,5 @@ a > i.material-icons {
 	top: 28px;
 }
 .mdl-checkbox {
-	margin: 16px 0;
 	font-weight: normal;
 }
